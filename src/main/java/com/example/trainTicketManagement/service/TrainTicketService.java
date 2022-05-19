@@ -1,5 +1,6 @@
 package com.example.trainTicketManagement.service;
 
+import com.example.trainTicketManagement.exception.TrainNotFoundException;
 import com.example.trainTicketManagement.model.TrainTicket;
 import com.example.trainTicketManagement.model.Train;
 import com.example.trainTicketManagement.model.Passenger;
@@ -33,6 +34,8 @@ public class TrainTicketService {
             if(Objects.equals(f.getTrainNumber(), trainNumber)){
                 chosenTrain = f;
             }
+            else
+                throw new TrainNotFoundException("Searched train cannot found !");
         }
         chosenTrain.setTrainNumber(chosenTrain.getTrainNumber()-passengers.size());
 
