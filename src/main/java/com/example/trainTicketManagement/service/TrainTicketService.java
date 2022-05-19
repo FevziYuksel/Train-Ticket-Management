@@ -34,9 +34,14 @@ public class TrainTicketService {
             if(Objects.equals(f.getTrainNumber(), trainNumber)){
                 chosenTrain = f;
             }
-            else
-                throw new TrainNotFoundException("Searched train cannot found !");
+            //Logical error : when if numbers don't match , it throws error
+            //else throw new TrainNotFoundException("Searched train cannot found !");
         }
+        if(chosenTrain.getId() == null) throw new TrainNotFoundException("Searched train cannot found !");
+        System.out.println(chosenTrain);
+        System.out.println(chosenTrain.getId());
+
+        //This code doesn't work replace train
         chosenTrain.setTrainNumber(chosenTrain.getTrainNumber()-passengers.size());
 
 

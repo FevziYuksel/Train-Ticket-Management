@@ -1,16 +1,18 @@
 package com.example.trainTicketManagement.exception;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class ExceptionResponse {
+
     private String message;
     private List<String> details;
+    private LocalDate timeStamp;
+
 }

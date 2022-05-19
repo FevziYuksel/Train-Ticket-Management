@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.LinkedList;
 import java.util.List;
 
-@Configuration
+//Doesn't work fix it
 public class PassengerConfig {
 
 

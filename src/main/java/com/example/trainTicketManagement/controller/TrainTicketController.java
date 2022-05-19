@@ -33,9 +33,9 @@ public class TrainTicketController {
     }
 
     @PostMapping
-    public ResponseEntity<TrainTicket> createTrainTicket(@RequestBody List<Passenger> passengers, @RequestParam(defaultValue="1790") String trainNumberAsString){
-
-        Integer trainNumber = Integer.parseInt( trainNumberAsString);
+    public ResponseEntity<TrainTicket> createTrainTicket(@RequestBody List<Passenger> passengers, @RequestParam("id") Integer trainNumber){ // @RequestParam(defaultValue= "1790")
+        //Parameter somewhat works
+        System.out.println(trainNumber);
         return new ResponseEntity<>(trainTicketService.createTrainTicket(passengers,trainNumber), HttpStatus.OK);
     }
 

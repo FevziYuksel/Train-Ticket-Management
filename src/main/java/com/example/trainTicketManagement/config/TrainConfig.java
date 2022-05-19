@@ -42,6 +42,7 @@ public class TrainConfig {
 
 
             trainRepository.saveAll(allTrains);
+
         };
     }
 }
