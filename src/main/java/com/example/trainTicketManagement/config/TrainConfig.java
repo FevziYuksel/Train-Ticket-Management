@@ -1,5 +1,6 @@
 package com.example.trainTicketManagement.config;
 
+import com.example.trainTicketManagement.model.Passenger;
 import com.example.trainTicketManagement.model.Train;
 import com.example.trainTicketManagement.repository.TrainRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -15,6 +16,7 @@ public class TrainConfig {
     @Bean
     CommandLineRunner commandLineRunner(
             TrainRepository trainRepository
+
     ){
         return args -> {
 

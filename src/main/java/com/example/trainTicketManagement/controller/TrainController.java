@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/v1/train-booking/train")
+@RequestMapping("/train-booking/train")
 public class TrainController {
 
     private final TrainService trainService;
