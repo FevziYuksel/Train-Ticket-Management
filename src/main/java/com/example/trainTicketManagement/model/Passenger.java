@@ -5,8 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 
 
-
-
 @Data
 @Builder
 @Entity(name = "Passenger")
