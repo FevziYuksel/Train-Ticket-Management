@@ -1,4 +1,5 @@
 package com.example.trainTicketManagement.config;
+import com.example.trainTicketManagement.model.FoodChoice;
 import com.example.trainTicketManagement.model.Passenger;
 import com.example.trainTicketManagement.repository.PassengerRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -21,7 +22,7 @@ public class PassengerConfig {
 
 
             List<Passenger> allPassensers = new LinkedList<>();
-            allPassensers.add(new Passenger("Mehmet",22,2));
+            allPassensers.add(new Passenger("Mehmet",22, FoodChoice.NORMAL));
 
             passengerRepository.saveAll(allPassensers);
         };

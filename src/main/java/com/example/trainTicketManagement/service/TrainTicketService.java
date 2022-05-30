@@ -47,7 +47,7 @@ public class TrainTicketService {
 
         TrainTicket trainTicket = new TrainTicket(passengers, chosenTrain);
 
-        trainTicket.setId(trainTicketRepository.findAll().size()+1);
+        trainTicket.setId((long) (trainTicketRepository.findAll().size()+1));
 
         trainService.updateSeatNumber(chosenTrain);
 
