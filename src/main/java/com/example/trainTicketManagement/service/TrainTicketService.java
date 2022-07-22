@@ -24,6 +24,7 @@ public class TrainTicketService {
         this.trainService = trainService;
         this.passengerService = passengerService;
     }
+    @Transactional
     public TrainTicket createTrainTicket(List<Passenger> passengers , Integer trainNumber){
 
 
