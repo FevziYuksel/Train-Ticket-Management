@@ -24,7 +24,7 @@ public class TrainTicketService {
         this.trainService = trainService;
         this.passengerService = passengerService;
     }
-    @Transactional
+    @Transactional //Check it!!!
     public TrainTicket createTrainTicket(List<Passenger> passengers , Integer trainNumber){
 
 
