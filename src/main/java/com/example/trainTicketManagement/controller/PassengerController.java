@@ -27,7 +27,7 @@ public class PassengerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Passenger>> getALlPassengers(){
+    public ResponseEntity<List<Passenger>> getAllPassengers(){
         return new ResponseEntity<>(passengerService.getAllPassenger(), HttpStatus.OK);
     }
 
